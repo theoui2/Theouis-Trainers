@@ -1,0 +1,10 @@
+{
+  "repo": "Theouis-Trainers",
+  "title": "Theoui's Trainers",
+  "version": "1.0",
+  "target": "Trainers",
+  "install": "switch/.overlays/Trainers.ovl",
+  "archive": "TheouisTrainers_Loader_v1.0.zip",
+  "description": "Central Switch overlay launcher for Theoui's game trainers, with automatic discovery and separate game updates.",
+  "context_shortcut": true
+}

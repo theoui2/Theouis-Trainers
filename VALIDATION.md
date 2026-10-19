@@ -1,0 +1,9 @@
+# Launcher and contextual-shortcut validation
+
+The native catalogue's existing 28 metadata/discovery/migration and 9 registry-preservation scenarios are retained. The shortcut adds production-core host tests covering six gestures, release/rearm, held-key startup, preset changes, Off, configuration persistence, conflicts with global/overlay/mode/package combos, preservation of other settings, save failure rollback, repeated changes, and ID-based routing. A separate runtime adapter suite uses fake Switch IPC to check application/PID races, service failures, same-game reopening, cross-game redirection and shared preset loading.
+
+All three overlays compile with devkitA64 GCC 16.1.0 and libnx 4.12.0. The packaged binary for each project is its current compiled overlay, with NRO/NACP title/author/version checks. Release ZIPs include exactly one SD overlay at the intended path, corresponding source and per-file checksums. BL2 and TOTK private-folder discovery and their title-ID associations are checked using the actual release files.
+
+The shared input extension preserves the standard combo. It handles the trainer callback on the UI thread, initializes the event/overlay before starting input polling, joins the polling thread before closing its event, and requires release after launch/preset changes. Frame polling does no filesystem, process or game-memory scan. Process IDs are rechecked before routing. A missing or ambiguous trainer falls back to the catalogue.
+
+No global Ultrahand config is replaced. Registration changes only the launcher's own auto mode; choosing a conflicting preset leaves the prior setting in place. Test commands are in SHORTCUT_TESTS.md. A physical Switch is still needed to validate initial Ultrahand launch, visible UI, input delivery, game switching and real gesture response.
