@@ -22,7 +22,7 @@ Atmosphere, a working overlay loader and Ultrahand must already be installed.
 | Trainer | Repository | Supported game version |
 |---|---|---|
 | Borderlands 2 | [Simple Trainer BL2 — Switch](https://github.com/theoui2/Simple-Trainer-BL2-Switch) | 1.0.2 |
-| Tears of the Kingdom | [Simple Trainer TOTK](https://github.com/theoui2/Simple-Trainer-TOTK-Switch) | 1.4.2 |
+| Tears of the Kingdom | [Simple Trainer TOTK](https://github.com/theoui2/Simple-Trainer-TOTK-) | 1.4.2 |
 
 This release contains the launcher only. Each game has its own release and update schedule. [Instructions en français](INSTALLATION_FR.md).
 
